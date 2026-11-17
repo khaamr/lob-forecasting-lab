@@ -1,0 +1,17 @@
+{
+  "signature": "d74d233a0a3ae0cc98b91aa961cb141d23c0235611b2e9a21284accc4c8cd097",
+  "files": {
+    "results/daily_summary.csv": "11f5316df2dc7000f37f02685ce1d12d47c68944b3083956ad6b3b0e8490d9ac",
+    "results/daily_metrics.csv": "de44d53864e8c8f4a494a88949fda019c8a8073f0f8248a4c14289a80ca2e727",
+    "results/daily_predictions.csv": "1638d20e9abc995b9111bf814a1b120bd47bdb99a0ad42ab3a396605ce38c0d5",
+    "results/cross_exchange.csv": "9d0046451cbe53d272ca7ea8a44d0e47ac84e5cbc1d3a2f3e152d64e12d23b66",
+    "results/calibration.csv": "405630736b360dc1769ccf4e31443436c6ed67139953e049883d1ba0ef12d767",
+    "results/execution_stress.csv": "285d43e9f9a941b076b70433a96729443b39b068c4051ce497dd32945d0febf0",
+    "results/tolerance.csv": "17c6f59b2ee4fa96a7d6fa7da0f0ea7fb3e0c671bec057e81ae22d8883e8232a",
+    "results/bootstrap.csv": "fe26ff24885ac28836e78e0b0e86c87e7c787e7e6fa0225de055d1d7d6d632ba",
+    "results/regime_scores.csv": "530d2fff5cd237c234117343c7f1f5e898226084d5b82264eac5deb1d2909594",
+    "results/ablations.csv": "c7a5e0d091251608508a9f53ed7c634f3d45830262dce67d81ad963df457fb35",
+    "results/seed_robustness.csv": "27c9cbdf47b2fcd6c7dda883e2add5d186be335c2f91a8bf142bb0142d7ef34e",
+    "results/budget_sensitivity.csv": "b57e56256600fbf202e056a0e3b149949694c6a7c041102695c667c113115994"
+  }
+}
