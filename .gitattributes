@@ -3,3 +3,5 @@ figures/*.json linguist-generated=true
 results/** linguist-generated=true
 *.pt binary
 *.npz binary
+*.pdf binary
+*.png binary
