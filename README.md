@@ -8,13 +8,13 @@
 
 **7 order books &nbsp; / &nbsp; 4 neural architectures &nbsp; / &nbsp; 3 horizons &nbsp; / &nbsp; 27 interactive views**
 
-[![team 8 presentation cover](docs/slides/slide-01.png)](docs/presentation.pdf)
+[![limit order book forecasting overview](docs/images/project-cover.png)](docs/presentation.pdf)
 
 </div>
 
 can a model predict the next price move and still produce a poor trading signal? this study follows a limit order book from raw updates to directional forecasts, then evaluates the timing of complete predicted transactions.
 
-based on **briola, bartolucci and aste (2025), _deep limit order book forecasting: a microstructural guide_**. [read the article](https://doi.org/10.1080/14697688.2025.2522911) · [authors' lobframe code](https://github.com/FinancialComputingUCL/LOBFrame)
+based on **_deep limit order book forecasting: a microstructural guide_ (2025)**. [read the article](https://doi.org/10.1080/14697688.2025.2522911) · [upstream lobframe framework](https://github.com/FinancialComputingUCL/LOBFrame)
 
 > **research scope:** this is a public-data method reproduction and extension. the original licensed 15-stock, 2017–2019 panel is unavailable. the saved experiments use different dates, a smaller training budget and short contiguous evaluation windows. they do not reproduce the paper's numerical benchmark.
 
@@ -46,7 +46,7 @@ we retain ten price/size levels on each side of the book. a 100-update historica
 <details>
 <summary><strong>the deeplob benchmark architecture</strong></summary>
 
-![deeplob architecture from the team presentation](docs/slides/slide-06.png)
+![deeplob architecture from the presentation](docs/slides/slide-06.png)
 
 three convolution blocks extract spatial and temporal patterns, inception branches combine scales, and an lstm maps the sequence to three class probabilities. transformer, graph/gru and conditional diffusion alternatives are independently implemented alongside prior, persistence and logistic baselines.
 
@@ -114,10 +114,4 @@ for the command-line pipeline and full retraining, see the [reproduction guide](
 
 [archived source manifests](data/manifests) · [official lobster samples](https://php.lobsterdata.com/info/DataSamples.php) · [tardis sample documentation](https://docs.tardis.dev/downloadable-csv-files/overview) · [upstream revision](results/reference_revision.json)
 
-vendor inputs and the third-party reference checkout are excluded from this repository. the original article is linked above; the presentation is included as supplied by the team.
-
-## team 8
-
-**olga makogonova · amira khabibullina · victoria ostrovskaya · vladislav alov · alexander pokrovsky**
-
-presentation, public-data reproduction and research extensions. the original paper and lobframe framework are credited to their respective authors.
+vendor inputs and the third-party reference checkout are excluded from this repository. the original article is linked above; the original presentation is included as supplied.

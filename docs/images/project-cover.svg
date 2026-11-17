@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+<title id="title">deep limit order book forecasting lab</title><desc id="desc">anonymous project cover with a schematic research illustration and project counts</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#03091e"/><stop offset=".57" stop-color="#0b2558"/><stop offset="1" stop-color="#144dac"/></linearGradient><radialGradient id="glow"><stop stop-color="#3279d8" stop-opacity=".5"/><stop offset="1" stop-color="#3279d8" stop-opacity="0"/></radialGradient></defs>
+<rect width="1400" height="620" rx="24" fill="url(#bg)"/>
+<ellipse cx="1260" cy="120" rx="500" ry="390" fill="url(#glow)"/>
+<g font-family="Helvetica,Arial,sans-serif">
+<text x="62" y="65" font-size="18" fill="#9ec9ff" font-weight="700">research project</text>
+<text x="58" y="153" font-size="64" fill="#ffffff" font-weight="700">deep limit order book</text>
+<text x="58" y="227" font-size="64" fill="#ffffff" font-weight="700">forecasting lab</text>
+<rect x="62" y="260" width="84" height="5" rx="2.5" fill="#9ac8ff"/>
+<text x="62" y="317" font-size="28" fill="#e6efff" font-weight="400">from book updates to directional signals</text>
+<text x="62" y="359" font-size="23" fill="#a7bfdf" font-weight="400">reproduction · microstructure · signal evaluation</text>
+<text x="1014" y="86" font-size="17" fill="#a8c9f4" font-weight="400">order-book schematic</text>
+<text x="1000" y="125" font-size="16" fill="#9bc9ff" font-weight="400">bid</text>
+<text x="1228" y="125" font-size="16" fill="#c2d7ff" font-weight="400">ask</text>
+<rect x="1068" y="144" width="82" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="144" width="111" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<rect x="1047" y="175" width="103" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="175" width="101" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<rect x="1082" y="206" width="68" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="206" width="118" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<rect x="1028" y="237" width="122" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="237" width="91" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<rect x="1055" y="268" width="95" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="268" width="105" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<rect x="1011" y="299" width="139" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="299" width="83" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<rect x="1036" y="330" width="114" height="20" rx="4" fill="#5d9eed" opacity=".85"/>
+<rect x="1170" y="330" width="95" height="20" rx="4" fill="#a2c5ff" opacity=".86"/>
+<path d="M1160 139V363" stroke="#e0edff" stroke-opacity=".35" stroke-width="2"/>
+<rect x="62" y="451" width="406" height="118" rx="16" fill="#ffffff" fill-opacity=".055" stroke="#84b3f6" stroke-opacity=".32"/>
+<text x="86" y="506" font-size="39" fill="#ffffff" font-weight="700">7</text>
+<text x="86" y="543" font-size="20" fill="#bdd3f0" font-weight="400">order books</text>
+<rect x="492" y="451" width="406" height="118" rx="16" fill="#ffffff" fill-opacity=".055" stroke="#84b3f6" stroke-opacity=".32"/>
+<text x="516" y="506" font-size="39" fill="#ffffff" font-weight="700">4</text>
+<text x="516" y="543" font-size="20" fill="#bdd3f0" font-weight="400">neural architectures</text>
+<rect x="922" y="451" width="406" height="118" rx="16" fill="#ffffff" fill-opacity=".055" stroke="#84b3f6" stroke-opacity=".32"/>
+<text x="946" y="506" font-size="39" fill="#ffffff" font-weight="700">27</text>
+<text x="946" y="543" font-size="20" fill="#bdd3f0" font-weight="400">interactive views</text>
+</g>
+</svg>
