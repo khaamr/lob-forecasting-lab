@@ -1,0 +1,12 @@
+{
+  "prediction_files_checked": 147,
+  "metric_rows": 1029,
+  "daily_experiments": 132,
+  "model_experiments": 84,
+  "finite_probabilities": true,
+  "metrics_recomputed": true,
+  "monotone_coverage": true,
+  "cross_exchange_time_separation": true,
+  "checkpoints_reloaded_and_replayed": 8,
+  "independent_retraining_max_probability_difference": 0.0
+}

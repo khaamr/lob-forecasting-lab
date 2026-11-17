@@ -1,0 +1,21 @@
+{
+  "prediction_files_checked": 147,
+  "metric_rows": 1029,
+  "daily_experiments": 132,
+  "model_experiments": 84,
+  "finite_probabilities": true,
+  "metrics_recomputed": true,
+  "monotone_coverage": true,
+  "cross_exchange_time_separation": true,
+  "publication_validation_date": "2026-11-17",
+  "scientific_tests_passed": 11,
+  "checkpoint_replay_in_publication_runtime": false,
+  "saved_notebook_execution": "archived outputs retained; setup path detection updated",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "torch": "2.8.0",
+    "plotly": "6.3.1"
+  }
+}

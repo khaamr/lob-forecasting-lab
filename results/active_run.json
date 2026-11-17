@@ -1,0 +1,17 @@
+{
+  "signature": "92730a30be720cba",
+  "config": {
+    "epochs": 8,
+    "patience": 3,
+    "per_class": 128,
+    "validation_cap": 1024,
+    "test_cap": 4096,
+    "models": [
+      "deeplob",
+      "transformer",
+      "graph",
+      "diffusion"
+    ],
+    "seed": 17
+  }
+}

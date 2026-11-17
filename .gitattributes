@@ -1,0 +1,5 @@
+research_dashboard.html linguist-generated=true whitespace=-blank-at-eol
+figures/*.json linguist-generated=true
+results/** linguist-generated=true
+*.pt binary
+*.npz binary

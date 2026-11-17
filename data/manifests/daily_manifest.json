@@ -1,0 +1,123 @@
+[
+  {
+    "asset": "aapl",
+    "field": "consumer devices",
+    "source": "https://finance.yahoo.com/quote/AAPL/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/aapl_daily_2022_2025.csv",
+    "sha256": "399c1b73dc21a7d9f5c75af90e11cb44fab8c83c7a5a1292d260a0d3f2bfdb57"
+  },
+  {
+    "asset": "goog",
+    "field": "internet services",
+    "source": "https://finance.yahoo.com/quote/GOOG/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/goog_daily_2022_2025.csv",
+    "sha256": "4b9592b1168d36083eca56d62bd5bc29dc95dcb7ac3df2aac36a63d6625c3e72"
+  },
+  {
+    "asset": "nvda",
+    "field": "semiconductors",
+    "source": "https://finance.yahoo.com/quote/NVDA/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/nvda_daily_2022_2025.csv",
+    "sha256": "7f5531988d13e4c0d5ecdf4cbea2914e9bcf250b8ac9420ecf9ca31b2e4f7a58"
+  },
+  {
+    "asset": "msft",
+    "field": "enterprise software",
+    "source": "https://finance.yahoo.com/quote/MSFT/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/msft_daily_2022_2025.csv",
+    "sha256": "1da692d6dc314d39c61b3b6b3381b045cc7464e8103f0ab1dac83b1c27dee108"
+  },
+  {
+    "asset": "amzn",
+    "field": "ecommerce and cloud",
+    "source": "https://finance.yahoo.com/quote/AMZN/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/amzn_daily_2022_2025.csv",
+    "sha256": "36b2b800f222db5ff5006f3e913c99b4ffd920d4744b6707dfafd056fe3be75f"
+  },
+  {
+    "asset": "intc",
+    "field": "semiconductors",
+    "source": "https://finance.yahoo.com/quote/INTC/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/intc_daily_2022_2025.csv",
+    "sha256": "aa572d7c554d6b331946e83cd28cd3ebec214886a6cdb1ff45c2e5fdaa867beb"
+  },
+  {
+    "asset": "enph",
+    "field": "solar energy",
+    "source": "https://finance.yahoo.com/quote/ENPH/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/enph_daily_2022_2025.csv",
+    "sha256": "7def793f7bb2296ae4d07b2dcef284aa36041e41be94fe89a2e21d190ac215c5"
+  },
+  {
+    "asset": "crsp",
+    "field": "gene editing",
+    "source": "https://finance.yahoo.com/quote/CRSP/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/crsp_daily_2022_2025.csv",
+    "sha256": "08422314f3a0dc0eee06304ec047728c01be745204363eb62ce83bded641f216"
+  },
+  {
+    "asset": "rklb",
+    "field": "space systems",
+    "source": "https://finance.yahoo.com/quote/RKLB/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/rklb_daily_2022_2025.csv",
+    "sha256": "4ed2d827af0e48ebcfe3cccdb097a445db6ce9c87f30f3a56640b00cf7534519"
+  },
+  {
+    "asset": "ionq",
+    "field": "quantum computing",
+    "source": "https://finance.yahoo.com/quote/IONQ/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/ionq_daily_2022_2025.csv",
+    "sha256": "400ba7d25028d26b7676a825aa0b22c1fa2dee1ab11741b91ca4e17933a72014"
+  },
+  {
+    "asset": "qqq",
+    "field": "nasdaq 100 etf",
+    "source": "https://finance.yahoo.com/quote/QQQ/history/",
+    "query_start": "2022-01-01",
+    "query_end_exclusive": "2026-01-01",
+    "auto_adjust": true,
+    "rows": 1003,
+    "path": "data/raw/qqq_daily_2022_2025.csv",
+    "sha256": "540d3c05db84df476702d71b970feace4982db857957e005eca8a7feabf9ec60"
+  }
+]

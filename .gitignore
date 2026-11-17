@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+tmp/
+data/raw/
+data/processed/daily_prices.csv
+reference/
+RS_Article.pdf
+RS_Presentation.pdf

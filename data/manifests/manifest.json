@@ -1,0 +1,65 @@
+[
+  {
+    "asset": "aapl",
+    "kind": "lobster",
+    "date": "2012-06-21",
+    "source": "https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_AAPL_2012-06-21_10.zip",
+    "path": "data/raw/aapl_2012-06-21_10.zip",
+    "sha256": "326839316d67d7819ca0541ffdf73cdb044d6ae4105cce0ef9c615e8848e9d43",
+    "selection": "complete public sample day"
+  },
+  {
+    "asset": "amzn",
+    "kind": "lobster",
+    "date": "2012-06-21",
+    "source": "https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_AMZN_2012-06-21_10.zip",
+    "path": "data/raw/amzn_2012-06-21_10.zip",
+    "sha256": "5cff62a609b27aef82285382ad646c4c2facc0a692a60bedda633de64c4aa54f",
+    "selection": "complete public sample day"
+  },
+  {
+    "asset": "goog",
+    "kind": "lobster",
+    "date": "2012-06-21",
+    "source": "https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_GOOG_2012-06-21_10.zip",
+    "path": "data/raw/goog_2012-06-21_10.zip",
+    "sha256": "2fa66b61c7c4d4cd3f19180aaa7f5937a26355f81b2ac8e4a84e36550e8dde4a",
+    "selection": "complete public sample day"
+  },
+  {
+    "asset": "intc",
+    "kind": "lobster",
+    "date": "2012-06-21",
+    "source": "https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_INTC_2012-06-21_10.zip",
+    "path": "data/raw/intc_2012-06-21_10.zip",
+    "sha256": "327121717467df0050654ba8a76e490d4dfe5a454a166294ace59b7e0877dff6",
+    "selection": "complete public sample day"
+  },
+  {
+    "asset": "msft",
+    "kind": "lobster",
+    "date": "2012-06-21",
+    "source": "https://php.lobsterdata.com/info/sample/LOBSTER_SampleFile_MSFT_2012-06-21_10.zip",
+    "path": "data/raw/msft_2012-06-21_10.zip",
+    "sha256": "0825e00ec83cb8ac8b53fd1efb7f2138b7848659e625c49621ebd9b55757be4c",
+    "selection": "complete public sample day"
+  },
+  {
+    "asset": "binance_btcusdt",
+    "kind": "tardis",
+    "date": "2024-01-01",
+    "source": "https://datasets.tardis.dev/v1/binance/book_snapshot_25/2024/01/01/BTCUSDT.csv.gz",
+    "path": "data/raw/binance_btcusdt_2024-01-01_prefix.csv.gz",
+    "sha256": "e7594fadfb329ade6393b8af37fa79e0d40df36bc8bdd38bce8ba7bf7aefc5e7",
+    "selection": "first 60000 captured snapshots; not a full day"
+  },
+  {
+    "asset": "coinbase_btc-usd",
+    "kind": "tardis",
+    "date": "2024-01-01",
+    "source": "https://datasets.tardis.dev/v1/coinbase/book_snapshot_25/2024/01/01/BTC-USD.csv.gz",
+    "path": "data/raw/coinbase_btc-usd_2024-01-01_prefix.csv.gz",
+    "sha256": "ff50f1506fdba93b2cbed3a48e94f222af496c790c3d78d7d16eb1c53fea2624",
+    "selection": "first 60000 captured snapshots; not a full day"
+  }
+]
