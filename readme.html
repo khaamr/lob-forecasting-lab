@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="lob forecasting reproduction: findings, methods, setup, use cases and provenance." name="description"/>
+  <meta content="#0b1015" name="theme-color"/>
+  <title>
+   readme · lob forecasting lab
+  </title>
+  <link href="assets/mark.svg" rel="icon" type="image/svg+xml"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script src="assets/readme.js" type="module">
+  </script>
+ </head>
+ <body>
+  <a class="skip" href="#main">
+   skip to content
+  </a>
+  <header class="header">
+   <div class="shell header-inner">
+    <a class="brand" href="index.html">
+     lob
+     <span class="brand-light">
+      /
+     </span>
+     lab
+    </a>
+    <nav aria-label="main navigation">
+     <a href="index.html#benchmarks">
+      benchmarks
+     </a>
+     <a href="research_dashboard.html">
+      dashboard
+     </a>
+     <a aria-current="page" href="readme.html">
+      readme
+     </a>
+    </nav>
+    <a class="button button-small button-outline" href="https://github.com/khaamr/lob-forecasting-lab">
+     github
+    </a>
+   </div>
+  </header>
+  <main class="shell readme-layout" id="main">
+   <aside class="readme-sidebar">
+    <p class="eyebrow">
+     the research guide
+    </p>
+    <a href="#explore-the-study">
+     explore the study
+    </a>
+    <a href="#from-book-updates-to-decisions">
+     the method
+    </a>
+    <a href="#what-the-saved-experiments-show">
+     saved results
+    </a>
+    <a href="#extensions-beyond-the-benchmark">
+     extensions
+    </a>
+    <a href="#reproduce">
+     reproduce
+    </a>
+    <a href="#data-and-provenance">
+     data and provenance
+    </a>
+    <a href="#practical-use-cases">
+     use cases
+    </a>
+    <a href="#website-and-media">
+     website and media
+    </a>
+   </aside>
+   <article class="readme-content">
+    <a class="back-link" href="index.html">
+     back to the lab
+    </a>
+    <h1 id="lob-forecasting-lab">
+     lob forecasting lab
+    </h1>
+    <p>
+     <strong>
+      deep limit order book forecasting · reproduction and extensions
+     </strong>
+    </p>
+    <p>
+     <a href="https://khaamr.github.io/lob-forecasting-lab/">
+      website
+     </a>
+     ·
+     <a href="https://khaamr.github.io/lob-forecasting-lab/readme.html">
+      readme page
+     </a>
+     ·
+     <a href="lob_reproduction_future_work.ipynb">
+      notebook
+     </a>
+     ·
+     <a href="docs/presentation.pdf">
+      presentation
+     </a>
+     ·
+     <a href="docs/presentation.md">
+      slide gallery
+     </a>
+     ·
+     <a href="https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html">
+      27-view dashboard
+     </a>
+    </p>
+    <p>
+     <strong>
+      7 order books   /   4 neural architectures   /   3 horizons   /   27 interactive views
+     </strong>
+    </p>
+    <p>
+     <a href="https://khaamr.github.io/lob-forecasting-lab/">
+      <img alt="deep limit order book forecasting animation" height="450" id="research-film" src="assets/research-film.gif" width="800"/>
+     </a>
+     <button aria-label="pause animation" class="button button-small button-outline" id="film-toggle" type="button">
+      ⅱ
+     </button>
+    </p>
+    <p>
+     <sub>
+      the supplied 20-second animation, shown as a silent looping gif
+     </sub>
+    </p>
+    <p>
+     can a model predict the next price move and still produce a poor trading signal? this study follows a limit order book from raw updates to directional forecasts, then evaluates the timing of complete predicted transactions.
+    </p>
+    <p>
+     based on
+     <strong>
+      <em>
+       deep limit order book forecasting: a microstructural guide
+      </em>
+      (2025)
+     </strong>
+     .
+     <a href="https://doi.org/10.1080/14697688.2025.2522911">
+      read the article
+     </a>
+     ·
+     <a href="https://github.com/FinancialComputingUCL/LOBFrame">
+      upstream lobframe framework
+     </a>
+    </p>
+    <blockquote>
+     <p>
+      <strong>
+       research scope:
+      </strong>
+      this is a public-data method reproduction and extension. the original licensed 15-stock, 2017–2019 panel is unavailable. the saved experiments use different dates, a smaller training budget and short contiguous evaluation windows. they do not reproduce the paper's numerical benchmark.
+     </p>
+    </blockquote>
+    <h2 id="explore-the-study">
+     explore the study
+    </h2>
+    <div class="table-scroll">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         start here
+        </th>
+        <th>
+         what you will find
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         <a href="https://khaamr.github.io/lob-forecasting-lab/">
+          website
+         </a>
+        </td>
+        <td>
+         filter saved results by book, horizon, confidence and metric; inspect measured market characteristics
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="https://khaamr.github.io/lob-forecasting-lab/readme.html">
+          readme page
+         </a>
+        </td>
+        <td>
+         a readable web edition of this guide
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="lob_reproduction_future_work.ipynb">
+          executed notebook
+         </a>
+        </td>
+        <td>
+         visible model implementations, data lineage, experiments, tables and plotly graphs
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="docs/presentation.pdf">
+          round 1 · 18-slide presentation
+         </a>
+        </td>
+        <td>
+         the motivation, paper framework, architecture, findings and limitations
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html">
+          27-view dashboard
+         </a>
+        </td>
+        <td>
+         an interactive gallery of all 27 views;
+         <a href="research_dashboard.html">
+          download the offline html
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="docs/reproduction.md">
+          reproduction guide
+         </a>
+        </td>
+        <td>
+         environment setup, data acquisition, cached replay and retraining
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="results">
+          saved results
+         </a>
+        </td>
+        <td>
+         metrics, calibration, transfer, ablations, uncertainty and verification records
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <h2 id="from-book-updates-to-decisions">
+     from book updates to decisions
+    </h2>
+    <p>
+     <strong>
+      book updates / clean and align / 100 × 40 windows / purged splits / forecasts / classification and timing
+     </strong>
+    </p>
+    <p>
+     we retain ten price/size levels on each side of the book. a 100-update historical window predicts the mid-price direction after
+     <strong>
+      10, 50 or 100 book updates
+     </strong>
+     . horizons count events, rather than seconds. chronological boundaries purge overlapping inputs and future labels, and normalization uses training observations only.
+    </p>
+    <details>
+     <summary>
+      <strong>
+       the deeplob benchmark architecture
+      </strong>
+     </summary>
+     ![deeplob architecture from the presentation](docs/slides/slide-06.png)
+
+three convolution blocks extract spatial and temporal patterns, inception branches combine scales, and an lstm maps the sequence to three class probabilities. transformer, graph/gru and conditional diffusion alternatives are independently implemented alongside prior, persistence and logistic baselines.
+    </details>
+    <h2 id="what-the-saved-experiments-show">
+     what the saved experiments show
+    </h2>
+    <p>
+     means below give equal weight to the
+     <strong>
+      21 asset/horizon combinations
+     </strong>
+     across five stock books and two crypto snapshot samples, at confidence threshold
+     <strong>
+      0.3
+     </strong>
+     . higher mcc, macro f1 and transaction overlap are better. undefined transaction overlaps are omitted from that column's mean.
+    </p>
+    <div class="table-scroll">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         model
+        </th>
+        <th style="text-align: right;">
+         mean mcc
+        </th>
+        <th style="text-align: right;">
+         macro f1
+        </th>
+        <th style="text-align: right;">
+         transaction overlap
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         logistic
+        </td>
+        <td style="text-align: right;">
+         <strong>
+          0.1191
+         </strong>
+        </td>
+        <td style="text-align: right;">
+         0.3151
+        </td>
+        <td style="text-align: right;">
+         0.0181
+        </td>
+       </tr>
+       <tr>
+        <td>
+         persistence
+        </td>
+        <td style="text-align: right;">
+         0.0909
+        </td>
+        <td style="text-align: right;">
+         <strong>
+          0.4029
+         </strong>
+        </td>
+        <td style="text-align: right;">
+         <strong>
+          0.0675
+         </strong>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         transformer
+        </td>
+        <td style="text-align: right;">
+         0.0766
+        </td>
+        <td style="text-align: right;">
+         0.2747
+        </td>
+        <td style="text-align: right;">
+         0.0093
+        </td>
+       </tr>
+       <tr>
+        <td>
+         deeplob
+        </td>
+        <td style="text-align: right;">
+         0.0160
+        </td>
+        <td style="text-align: right;">
+         0.2325
+        </td>
+        <td style="text-align: right;">
+         0.0055
+        </td>
+       </tr>
+       <tr>
+        <td>
+         graph + gru
+        </td>
+        <td style="text-align: right;">
+         0.0035
+        </td>
+        <td style="text-align: right;">
+         0.2099
+        </td>
+        <td style="text-align: right;">
+         0.0021
+        </td>
+       </tr>
+       <tr>
+        <td>
+         conditional diffusion
+        </td>
+        <td style="text-align: right;">
+         0.0014
+        </td>
+        <td style="text-align: right;">
+         0.2006
+        </td>
+        <td style="text-align: right;">
+         0.0047
+        </td>
+       </tr>
+       <tr>
+        <td>
+         class prior
+        </td>
+        <td style="text-align: right;">
+         0.0000
+        </td>
+        <td style="text-align: right;">
+         0.2517
+        </td>
+        <td style="text-align: right;">
+         0.0000
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p>
+     the logistic baseline has the highest average mcc, while persistence has the highest transaction overlap. the saved study therefore supports evaluating classification and signal timing separately. these averages do not establish general superiority of an architecture.
+    </p>
+    <p>
+     transaction overlap compares complete directional sequences derived from predicted and true labels. it is
+     <strong>
+      not a fill probability or a profitability measure
+     </strong>
+     . the first 4,096 eligible test windows span approximately
+     <strong>
+      12 seconds to 13 minutes
+     </strong>
+     , depending on the book. the original paper's full-day results are a separate reference.
+    </p>
+    <p>
+     <a href="results/metrics.csv">
+      data behind the table
+     </a>
+     ·
+     <a href="results/evaluation_windows.csv">
+      exact evaluation intervals
+     </a>
+     ·
+     <a href="results/microstructure.csv">
+      microstructure audit
+     </a>
+    </p>
+    <h2 id="extensions-beyond-the-benchmark">
+     extensions beyond the benchmark
+    </h2>
+    <div class="table-scroll">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         extension
+        </th>
+        <th>
+         question it investigates
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         relative prices and log sizes
+        </td>
+        <td>
+         does a more stationary representation help the graph model?
+        </td>
+       </tr>
+       <tr>
+        <td>
+         graph-edge ablation
+        </td>
+        <td>
+         do the connections add information beyond the same node features?
+        </td>
+       </tr>
+       <tr>
+        <td>
+         temperature calibration
+        </td>
+        <td>
+         are predicted probabilities reliable on held-out observations?
+        </td>
+       </tr>
+       <tr>
+        <td>
+         cross-exchange transfer
+        </td>
+        <td>
+         can a model transfer between real binance and coinbase snapshots?
+        </td>
+       </tr>
+       <tr>
+        <td>
+         fee and delay sensitivity
+        </td>
+        <td>
+         how sensitive are assumed execution outcomes to friction and timing?
+        </td>
+       </tr>
+       <tr>
+        <td>
+         seeds, bootstrap and training budget
+        </td>
+        <td>
+         how stable are results to sampling uncertainty and compute?
+        </td>
+       </tr>
+       <tr>
+        <td>
+         daily forecasting
+        </td>
+        <td>
+         do separate daily-bar models generalize across 2024 and 2025?
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p>
+     <img alt="extension overview from the presentation" src="docs/slides/slide-16.png"/>
+    </p>
+    <p>
+     daily bars form a separate experiment and are never substituted for order books. the licensed-archive adapter is supplied but has not been run against the unavailable original dataset.
+     <a href="docs/reproduction.md">
+      full protocol and limitations
+     </a>
+    </p>
+    <h2 id="reproduce">
+     reproduce
+    </h2>
+    <p>
+     use
+     <strong>
+      python 3.10
+     </strong>
+     . requirements.txt and requirements.lock record the publication validation runtime. the supplied run environment is preserved in environment/archived-requirements.txt; exact numerical replay can depend on package and platform versions.
+    </p>
+    <pre><code class="language-sh">git clone https://github.com/khaamr/lob-forecasting-lab.git
+cd lob-forecasting-lab
+python3.10 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m ipykernel install --user --name lob-research --display-name 'lob research'
+python -m pytest -q tests
+</code></pre>
+    <p>
+     open the notebook with the
+     <code>
+      lob research
+     </code>
+     kernel. its first data cell downloads missing public inputs. the repository includes saved model outputs, checkpoints and the executed notebook; raw vendor data must be acquired separately. the downloader writes hashes, which are checked before the data are used.
+    </p>
+    <p>
+     for the command-line pipeline and full retraining, see the
+     <a href="docs/reproduction.md">
+      reproduction guide
+     </a>
+     . to review without downloading data or training, open the
+     <a href="docs/presentation.pdf">
+      presentation
+     </a>
+     , notebook outputs or
+     <a href="research_dashboard.html">
+      offline dashboard
+     </a>
+     .
+    </p>
+    <h2 id="data-and-provenance">
+     data and provenance
+    </h2>
+    <ul>
+     <li>
+      <strong>
+       stock books:
+      </strong>
+      official lobster public samples for aapl, amzn, goog, intc and msft on
+      <strong>
+       2012-06-21
+      </strong>
+      ; ten levels and matching messages.
+     </li>
+     <li>
+      <strong>
+       crypto books:
+      </strong>
+      the first 60,000 captured binance and coinbase bitcoin snapshots on
+      <strong>
+       2024-01-01
+      </strong>
+      ; ten levels retained.
+     </li>
+     <li>
+      <strong>
+       daily extension:
+      </strong>
+      adjusted stock/qqq daily bars during
+      <strong>
+       2022–2025
+      </strong>
+      , kept separate from the event-level task.
+     </li>
+    </ul>
+    <p>
+     <a href="data/manifests">
+      archived source manifests
+     </a>
+     ·
+     <a href="https://php.lobsterdata.com/info/DataSamples.php">
+      official lobster samples
+     </a>
+     ·
+     <a href="https://docs.tardis.dev/downloadable-csv-files/overview">
+      tardis sample documentation
+     </a>
+     ·
+     <a href="results/reference_revision.json">
+      upstream revision
+     </a>
+    </p>
+    <p>
+     vendor inputs and the third-party reference checkout are excluded from this repository. the original article is linked above; the round 1 presentation is included as supplied.
+    </p>
+    <h2 id="practical-use-cases">
+     practical use cases
+    </h2>
+    <div class="table-scroll">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         scenario
+        </th>
+        <th>
+         what this study helps resolve
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         choosing an architecture
+        </td>
+        <td>
+         compare four neural models with logistic, persistence and prior baselines before committing more compute; the saved logistic baseline leads average mcc
+        </td>
+       </tr>
+       <tr>
+        <td>
+         reviewing a seemingly accurate forecast
+        </td>
+        <td>
+         inspect mcc, macro f1 and class balance together; stable labels dominate some short test intervals
+        </td>
+       </tr>
+       <tr>
+        <td>
+         setting a confidence threshold
+        </td>
+        <td>
+         inspect how filtering changes skill and retained coverage; undefined metrics stay undefined rather than becoming zero
+        </td>
+       </tr>
+       <tr>
+        <td>
+         studying signal timing
+        </td>
+        <td>
+         compare classification with complete transaction overlap; directional skill does not establish well-timed execution or profitability
+        </td>
+       </tr>
+       <tr>
+        <td>
+         moving between markets
+        </td>
+        <td>
+         inspect spread regimes and cross-exchange transfer before assuming a signal generalizes
+        </td>
+       </tr>
+       <tr>
+        <td>
+         reviewing or teaching the reproduction
+        </td>
+        <td>
+         use the site, readme page, executed notebook and all 27 original interactive views without retraining
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <h2 id="website-and-media">
+     website and media
+    </h2>
+    <p>
+     the website compares saved experiments from results/metrics.csv. market details use results/microstructure.csv and results/evaluation_windows.csv. all forecasts are saved outputs; the page does not run neural models or receive a live market feed.
+    </p>
+    <p>
+     the original dashboard, notebook, presentation, checkpoints, research scripts and scientific tests remain available. the homepage replaces the old redirect; research_dashboard.html keeps the full 27-view gallery. the animation is illustrative project media, not experimental evidence.
+    </p>
+    <p>
+     assets/research-film.gif is an unchanged copy of the supplied gemini_video_slow.gif: 800 × 450 pixels, 240 frames and a 20-second loop. the same gif appears in this readme and on the website. the website can pause it on a still frame and shows that still frame by default when reduced motion is enabled.
+    </p>
+    <p>
+     preview the website from the repository root:
+    </p>
+    <pre><code class="language-sh">python3 -m http.server 8000
+</code></pre>
+    <p>
+     open http://localhost:8000. the site needs no build or javascript package installation. its csv-backed interactions require an http server rather than opening index.html as a file.
+    </p>
+    <p>
+     validate the website's metric calculations:
+    </p>
+    <pre><code class="language-sh">node --test tests/site.test.mjs
+</code></pre>
+    <p>
+     after editing this readme, regenerate its web edition with the optional authoring dependency:
+    </p>
+    <pre><code class="language-sh">python -m pip install markdown beautifulsoup4
+python scripts/build_readme.py
+</code></pre>
+   </article>
+  </main>
+  <footer class="shell footer">
+   <a class="brand" href="index.html">
+    lob
+    <span class="brand-light">
+     /
+    </span>
+    lab
+   </a>
+   <p>
+    public-data reproduction &amp; extensions
+    <br/>
+    research prototype · no live market feed
+   </p>
+   <div>
+    <a href="README.md">
+     markdown source
+    </a>
+    <a href="https://doi.org/10.1080/14697688.2025.2522911">
+     original article
+    </a>
+    <a href="research_dashboard.html">
+     full dashboard
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
