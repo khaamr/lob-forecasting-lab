@@ -1,12 +1,806 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="0; url=research_dashboard.html">
-<title>lob forecasting lab · interactive research</title>
-<link rel="canonical" href="https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html">
-<style>body{background:#060f2b;color:#eff4ff;font:18px system-ui,sans-serif;max-width:720px;margin:12vh auto;padding:24px}a{color:#a8c8ff}</style>
-</head>
-<body><h1>lob forecasting lab</h1><p><a href="research_dashboard.html">open the interactive research dashboard</a></p><p><a href="docs/presentation.pdf">read the team presentation</a> · <a href="https://github.com/khaamr/lob-forecasting-lab">view the repository</a></p></body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="A public-data reproduction of deep limit order book forecasting. Seven books, four neural architectures, three horizons, and traceable results." name="description"/>
+  <meta content="#0b1015" name="theme-color"/>
+  <title>
+   LOB Forecasting Lab · From order flow to evidence
+  </title>
+  <link href="assets/mark.svg" rel="icon" type="image/svg+xml"/>
+  <link href="assets/site.css" rel="stylesheet"/>
+  <script src="assets/site.js" type="module">
+  </script>
+ </head>
+ <body>
+  <a class="skip" href="#main">
+   Skip to content
+  </a>
+  <header class="header">
+   <div class="shell header-inner">
+    <a aria-label="LOB forecasting lab home" class="brand" href="index.html">
+     <svg aria-hidden="true" viewbox="0 0 32 32">
+      <path d="M3 8v16h6V8zm10-5v21h6V3zm10 10v16h6V13z" fill="currentColor">
+      </path>
+     </svg>
+     <span>
+      LOB
+      <span class="brand-light">
+       /
+      </span>
+      lab
+      <span class="brand-sub">
+       FORECASTING RESEARCH
+      </span>
+     </span>
+    </a>
+    <nav aria-label="Main navigation">
+     <a href="#benchmarks">
+      Benchmarks
+     </a>
+     <a href="#research">
+      The research
+     </a>
+     <a href="#methods">
+      Methods
+     </a>
+     <a href="readme.html">
+      Readme
+     </a>
+    </nav>
+    <a class="button button-small button-outline" href="https://github.com/khaamr/lob-forecasting-lab">
+     GitHub
+     <span aria-hidden="true">
+      ⌘
+     </span>
+    </a>
+   </div>
+  </header>
+  <main id="main">
+   <section class="hero shell">
+    <a class="announcement" href="#benchmarks">
+     <span class="status-dot">
+     </span>
+     PUBLIC-DATA REPRODUCTION
+     <span class="announcement-end">
+      Saved experiments · seed 17
+     </span>
+    </a>
+    <div class="hero-grid">
+     <div class="hero-copy">
+      <p class="eyebrow">
+       MARKET MICROSTRUCTURE / OPEN RESEARCH
+      </p>
+      <h1>
+       Beyond the next
+       <br/>
+       price
+       <span class="accent">
+        move.
+       </span>
+      </h1>
+      <p class="hero-description">
+       Deep limit order book forecasting, reproduced.
+       <br/>
+       Explore what neural models learn—and whether their predictions become well-timed decisions.
+      </p>
+      <div class="actions">
+       <a class="button button-primary" href="#benchmarks">
+        Explore the results
+        <span aria-hidden="true">
+         ▥
+        </span>
+       </a>
+       <a class="text-link" href="readme.html">
+        Read the study
+       </a>
+      </div>
+      <p class="hero-footnote">
+       Open code. Real book data. Traceable evidence.
+      </p>
+     </div>
+     <div class="film">
+      <video aria-label="Animated research visualization supplied for this project" autoplay="" id="research-film" loop="" muted="" playsinline="" poster="assets/research-poster.jpg" preload="metadata">
+       <source src="assets/research-film.mp4" type="video/mp4"/>
+      </video>
+      <div class="film-top">
+       <span class="mono">
+        THE ANATOMY OF ORDER FLOW
+       </span>
+       <span class="film-tag">
+        RESEARCH FILM
+       </span>
+      </div>
+      <div class="film-bottom">
+       <span>
+        Structure behind the signal.
+       </span>
+       <button aria-label="Pause research film" class="icon-button" id="film-toggle" type="button">
+        Ⅱ
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="study-stats">
+     <div>
+      <strong>
+       07
+       <span>
+        books
+       </span>
+      </strong>
+      <p>
+       5 equities · 2 crypto venues
+      </p>
+     </div>
+     <div>
+      <strong>
+       04
+       <span>
+        neural architectures
+       </span>
+      </strong>
+      <p>
+       Alongside 3 simple baselines
+      </p>
+     </div>
+     <div>
+      <strong>
+       03
+       <span>
+        event horizons
+       </span>
+      </strong>
+      <p>
+       10 · 50 · 100 book updates
+      </p>
+     </div>
+     <div>
+      <strong>
+       27
+       <span>
+        interactive views
+       </span>
+      </strong>
+      <p>
+       Every figure, open to inspection
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="section shell" id="benchmarks">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       THE EVIDENCE, AT YOUR FINGERTIPS
+      </p>
+      <h2>
+       Complexity meets its benchmark.
+      </h2>
+      <p>
+       A more sophisticated model doesn’t guarantee a better signal. Compare the saved runs yourself.
+      </p>
+     </div>
+     <a class="text-link mono" download="" href="results/metrics.csv">
+      Download source CSV
+      <span aria-hidden="true">
+       ↓
+      </span>
+     </a>
+    </div>
+    <div class="terminal">
+     <div class="terminal-heading">
+      <div>
+       <span class="status-dot">
+       </span>
+       <strong>
+        Experiment explorer
+       </strong>
+       <span class="muted mono">
+        SAVED RESULTS / 92730a30be720cba
+       </span>
+      </div>
+      <span class="terminal-badge">
+       REPRODUCTION
+      </span>
+     </div>
+     <form class="filters" id="filters">
+      <label>
+       Order book
+       <select id="asset" name="asset">
+        <option value="all">
+         All 7 books
+        </option>
+        <option value="aapl">
+         AAPL
+        </option>
+        <option value="amzn">
+         AMZN
+        </option>
+        <option value="goog">
+         GOOG
+        </option>
+        <option value="intc">
+         INTC
+        </option>
+        <option value="msft">
+         MSFT
+        </option>
+        <option value="binance_btcusdt">
+         Binance · BTC/USDT
+        </option>
+        <option value="coinbase_btc-usd">
+         Coinbase · BTC/USD
+        </option>
+       </select>
+      </label>
+      <fieldset>
+       <legend>
+        Horizon · book updates
+       </legend>
+       <div class="segmented" id="horizons">
+        <button aria-pressed="true" data-value="all" type="button">
+         All
+        </button>
+        <button aria-pressed="false" data-value="10" type="button">
+         10
+        </button>
+        <button aria-pressed="false" data-value="50" type="button">
+         50
+        </button>
+        <button aria-pressed="false" data-value="100" type="button">
+         100
+        </button>
+       </div>
+      </fieldset>
+      <label>
+       Confidence threshold
+       <select id="threshold" name="threshold">
+        <option value="0.3">
+         0.30 · all forecasts
+        </option>
+        <option value="0.4">
+         0.40
+        </option>
+        <option value="0.5">
+         0.50
+        </option>
+        <option value="0.6">
+         0.60
+        </option>
+        <option value="0.7">
+         0.70
+        </option>
+        <option value="0.8">
+         0.80
+        </option>
+        <option value="0.9">
+         0.90
+        </option>
+       </select>
+      </label>
+      <label>
+       Compare by
+       <select id="metric" name="metric">
+        <option value="mcc">
+         Matthews correlation
+        </option>
+        <option value="macro_f1">
+         Macro F1
+        </option>
+        <option value="p_t">
+         Transaction overlap
+        </option>
+        <option value="coverage">
+         Forecast coverage
+        </option>
+       </select>
+      </label>
+     </form>
+     <div class="explorer-content">
+      <div class="comparison">
+       <div class="panel-caption">
+        <span id="chart-title">
+         MATTHEWS CORRELATION
+        </span>
+        <span class="mono">
+         HIGHER IS BETTER
+        </span>
+       </div>
+       <div aria-live="polite" class="bar-chart" id="chart">
+        <p>
+         Loading saved experiment results…
+        </p>
+       </div>
+       <div class="chart-scale">
+        <span id="scale-min">
+         0.00
+        </span>
+        <span id="scale-max">
+         1.00
+        </span>
+       </div>
+      </div>
+      <aside class="insight-panel">
+       <span class="eyebrow">
+        SELECTED EVIDENCE
+       </span>
+       <h3 id="leader-name">
+        Logistic regression
+       </h3>
+       <p class="large-metric" id="leader-score">
+        0.1191
+       </p>
+       <p id="leader-description">
+        Mean MCC across all 21 asset/horizon combinations.
+       </p>
+       <div class="insight-divider">
+       </div>
+       <div class="stat-line">
+        <span>
+         Mean coverage
+        </span>
+        <strong id="coverage">
+         100.0%
+        </strong>
+       </div>
+       <div class="stat-line">
+        <span>
+         Combinations / model
+        </span>
+        <strong id="combinations">
+         21
+        </strong>
+       </div>
+       <div class="stat-line">
+        <span>
+         Training budget
+        </span>
+        <strong>
+         8 epochs max
+        </strong>
+       </div>
+       <p class="small-note">
+        Equal-weight means. Undefined values are excluded per metric; coverage always stays visible.
+       </p>
+      </aside>
+     </div>
+     <details class="table-details">
+      <summary>
+       Inspect the exact numbers
+      </summary>
+      <div class="table-scroll">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Model
+          </th>
+          <th>
+           MCC
+          </th>
+          <th>
+           Macro F1
+          </th>
+          <th>
+           Overlap
+          </th>
+          <th>
+           Coverage
+          </th>
+          <th>
+           Defined MCC runs
+          </th>
+         </tr>
+        </thead>
+        <tbody id="metric-table">
+        </tbody>
+       </table>
+      </div>
+     </details>
+     <div class="terminal-footer">
+      <span id="filter-summary" role="status">
+       All 7 books · all horizons · threshold 0.30
+      </span>
+      <span>
+       Source: results/metrics.csv
+      </span>
+     </div>
+    </div>
+    <div class="finding-strip">
+     <span aria-hidden="true" class="finding-symbol">
+      ≠
+     </span>
+     <div>
+      <strong>
+       A correct direction is only half the story.
+      </strong>
+      <p>
+       Logistic leads average MCC. Persistence leads transaction overlap. Classification skill and signal timing measure different things.
+      </p>
+     </div>
+     <a class="text-link" href="research_dashboard.html">
+      Explore all 27 views
+     </a>
+    </div>
+   </section>
+   <section class="research-band" id="research">
+    <div class="shell section">
+     <div class="section-heading">
+      <div>
+       <p class="eyebrow">
+        REAL INPUTS. EXPLICIT BOUNDARIES.
+       </p>
+       <h2>
+        Seven books. Very different markets.
+       </h2>
+       <p>
+        Microstructure changes the task. Inspect the measured characteristics of each book.
+       </p>
+      </div>
+     </div>
+     <div class="market-grid">
+      <div aria-label="Choose an order book" class="market-list" id="market-list">
+      </div>
+      <div aria-live="polite" class="market-detail" id="market-detail">
+      </div>
+     </div>
+     <p class="source-note">
+      Book statistics:
+      <a href="results/microstructure.csv">
+       microstructure.csv
+      </a>
+      · evaluation intervals:
+      <a href="results/evaluation_windows.csv">
+       evaluation_windows.csv
+      </a>
+      . Class counts describe the saved evaluation interval, not every horizon.
+     </p>
+    </div>
+   </section>
+   <section class="section shell" id="methods">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       FROM RAW UPDATES TO A TESTABLE CLAIM
+      </p>
+      <h2>
+       Follow the reproduction.
+      </h2>
+      <p>
+       One consistent protocol, four independently implemented neural architectures.
+      </p>
+     </div>
+     <a class="text-link mono" href="https://github.com/khaamr/lob-forecasting-lab/blob/main/lob_reproduction_future_work.ipynb">
+      Open executed notebook
+     </a>
+    </div>
+    <div class="pipeline">
+     <div>
+      <span class="pipeline-icon">
+       ▤
+      </span>
+      <strong>
+       Observe
+      </strong>
+      <p>
+       10 price and size levels
+       <br/>
+       on each side of the book
+      </p>
+     </div>
+     <span aria-hidden="true" class="pipeline-join">
+      /
+     </span>
+     <div>
+      <span class="pipeline-icon">
+       ▦
+      </span>
+      <strong>
+       Represent
+      </strong>
+      <p>
+       100 historical updates
+       <br/>
+       × 40 input features
+      </p>
+     </div>
+     <span aria-hidden="true" class="pipeline-join">
+      /
+     </span>
+     <div>
+      <span class="pipeline-icon">
+       ◈
+      </span>
+      <strong>
+       Predict
+      </strong>
+      <p>
+       Down, stable, up
+       <br/>
+       at 10, 50, 100 events
+      </p>
+     </div>
+     <span aria-hidden="true" class="pipeline-join">
+      /
+     </span>
+     <div>
+      <span class="pipeline-icon">
+       ≋
+      </span>
+      <strong>
+       Evaluate
+      </strong>
+      <p>
+       Classification, coverage
+       <br/>
+       and transaction timing
+      </p>
+     </div>
+    </div>
+    <div class="architecture">
+     <div aria-label="Neural architectures" class="model-tabs" role="tablist">
+      <button aria-controls="model-panel" aria-selected="true" data-model="deeplob" id="tab-deeplob" role="tab">
+       DeepLOB
+       <span>
+        CNN + LSTM
+       </span>
+      </button>
+      <button aria-controls="model-panel" aria-selected="false" data-model="transformer" id="tab-transformer" role="tab" tabindex="-1">
+       Transformer
+       <span>
+        SELF-ATTENTION
+       </span>
+      </button>
+      <button aria-controls="model-panel" aria-selected="false" data-model="graph" id="tab-graph" role="tab" tabindex="-1">
+       Graph + GRU
+       <span>
+        BOOK STRUCTURE
+       </span>
+      </button>
+      <button aria-controls="model-panel" aria-selected="false" data-model="diffusion" id="tab-diffusion" role="tab" tabindex="-1">
+       Diffusion
+       <span>
+        CONDITIONAL MODEL
+       </span>
+      </button>
+     </div>
+     <div aria-labelledby="tab-deeplob" id="model-panel" role="tabpanel" tabindex="0">
+     </div>
+    </div>
+    <div class="protocol">
+     <span>
+      TRAIN-ONLY NORMALIZATION
+     </span>
+     <span>
+      PURGED CHRONOLOGICAL SPLITS
+     </span>
+     <span>
+      HASHED DATA MANIFESTS
+     </span>
+     <span>
+      SAVED CHECKPOINTS
+     </span>
+    </div>
+   </section>
+   <section class="section shell extensions">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       QUESTIONS WORTH ASKING NEXT
+      </p>
+      <h2>
+       Beyond the headline metric.
+      </h2>
+     </div>
+    </div>
+    <div class="extension-grid">
+     <a href="research_dashboard.html">
+      <span class="card-icon">
+       ◎
+      </span>
+      <span class="mono muted">
+       CONFIDENCE &amp; CALIBRATION
+      </span>
+      <h3>
+       When should a model abstain?
+      </h3>
+      <p>
+       Inspect confidence, retained coverage and held-out temperature calibration together.
+      </p>
+      <span class="card-link">
+       Inspect the evidence
+      </span>
+     </a>
+     <a href="research_dashboard.html">
+      <span class="card-icon">
+       ⇄
+      </span>
+      <span class="mono muted">
+       CROSS-EXCHANGE TRANSFER
+      </span>
+      <h3>
+       Does the signal travel?
+      </h3>
+      <p>
+       Compare real Binance and Coinbase snapshots, with explicit time separation.
+      </p>
+      <span class="card-link">
+       Compare the venues
+      </span>
+     </a>
+     <a href="research_dashboard.html">
+      <span class="card-icon">
+       ◷
+      </span>
+      <span class="mono muted">
+       FRICTION &amp; UNCERTAINTY
+      </span>
+      <h3>
+       What survives the assumptions?
+      </h3>
+      <p>
+       Explore fee and delay sensitivity, seeds, block bootstrap and training budgets.
+      </p>
+      <span class="card-link">
+       Explore the extensions
+      </span>
+     </a>
+    </div>
+   </section>
+   <section class="section shell resources">
+    <div class="resource-heading">
+     <p class="eyebrow">
+      OPEN THE LAB
+     </p>
+     <h2>
+      Every result has a trail.
+     </h2>
+     <p>
+      Start with the story. Inspect the evidence. Reproduce the experiment.
+     </p>
+    </div>
+    <div class="resource-grid">
+     <a href="readme.html">
+      <span class="resource-type">
+       THE GUIDE
+      </span>
+      <h3>
+       Read the study
+      </h3>
+      <p>
+       Findings, scope, setup and use cases in one place.
+      </p>
+      <span class="card-link">
+       Open readme
+      </span>
+     </a>
+     <a href="docs/presentation.pdf">
+      <span class="resource-type">
+       THE PRESENTATION
+      </span>
+      <h3>
+       The research, in 18 slides
+      </h3>
+      <p>
+       Motivation, architecture, evidence and limitations.
+      </p>
+      <span class="card-link">
+       Open presentation
+      </span>
+     </a>
+     <a href="research_dashboard.html">
+      <span class="resource-type">
+       THE FULL DASHBOARD
+      </span>
+      <h3>
+       All 27 interactive views
+      </h3>
+      <p>
+       The complete original gallery remains available.
+      </p>
+      <span class="card-link">
+       Open dashboard
+      </span>
+     </a>
+    </div>
+   </section>
+   <section class="section shell scope">
+    <div>
+     <p class="eyebrow">
+      REPRODUCTION, WITH PERSPECTIVE
+     </p>
+     <h2>
+      Honest about what
+      <br/>
+      the evidence supports.
+     </h2>
+    </div>
+    <div>
+     <details open="">
+      <summary>
+       What exactly is reproduced?
+      </summary>
+      <p>
+       The method of
+       <em>
+        Deep Limit Order Book Forecasting: A Microstructural Guide
+       </em>
+       (2025), using public samples. The original licensed 15-stock, 2017–2019 panel is unavailable. This study uses different dates, a smaller budget and short evaluation windows; it does not replicate the paper’s numerical benchmark.
+      </p>
+     </details>
+     <details>
+      <summary>
+       Does transaction overlap measure profitability?
+      </summary>
+      <p>
+       No. It compares complete directional sequences derived from predicted and true labels. It is not a fill probability, realized P&amp;L, or evidence of a profitable strategy.
+      </p>
+     </details>
+     <details>
+      <summary>
+       How long are the evaluation intervals?
+      </summary>
+      <p>
+       The first 4,096 eligible test windows span about 12 seconds to 13 minutes, depending on the book. Forecast horizons count book updates rather than seconds. Daily-bar extensions are separate experiments.
+      </p>
+     </details>
+     <details>
+      <summary>
+       Can I inspect the study without training?
+      </summary>
+      <p>
+       Yes. The executed notebook, saved results, presentation and original interactive dashboard are included. Raw vendor data must be acquired separately for a complete rerun. See the
+       <a href="https://github.com/khaamr/lob-forecasting-lab/blob/main/docs/reproduction.md">
+        reproduction guide
+       </a>
+       .
+      </p>
+     </details>
+    </div>
+   </section>
+   <section class="shell closing">
+    <div>
+     <p class="eyebrow">
+      LESS BLACK BOX. MORE RESEARCH.
+     </p>
+     <h2>
+      Look inside the forecast.
+     </h2>
+    </div>
+    <a class="button button-primary" href="https://github.com/khaamr/lob-forecasting-lab">
+     Explore the repository
+     <span aria-hidden="true">
+      ⌘
+     </span>
+    </a>
+   </section>
+  </main>
+  <footer class="shell footer">
+   <a class="brand" href="index.html">
+    LOB
+    <span class="brand-light">
+     /
+    </span>
+    lab
+   </a>
+   <p>
+    Public-data reproduction &amp; extensions
+    <br/>
+    Research prototype · no live market feed
+   </p>
+   <div>
+    <a href="readme.html">
+     Readme
+    </a>
+    <a href="https://doi.org/10.1080/14697688.2025.2522911">
+     Original article
+    </a>
+    <a href="https://github.com/FinancialComputingUCL/LOBFrame">
+     LOBFrame
+    </a>
+   </div>
+  </footer>
+ </body>
 </html>

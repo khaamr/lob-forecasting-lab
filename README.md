@@ -4,11 +4,13 @@
 
 **deep limit order book forecasting · reproduction and extensions**
 
-[notebook](lob_reproduction_future_work.ipynb) · [presentation](docs/presentation.pdf) · [slide gallery](docs/presentation.md) · [interactive dashboard](https://khaamr.github.io/lob-forecasting-lab/)
+[research site](https://khaamr.github.io/lob-forecasting-lab/) · [readme page](https://khaamr.github.io/lob-forecasting-lab/readme.html) · [notebook](lob_reproduction_future_work.ipynb) · [presentation](docs/presentation.pdf) · [slide gallery](docs/presentation.md) · [27-view dashboard](https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html)
 
 **7 order books &nbsp; / &nbsp; 4 neural architectures &nbsp; / &nbsp; 3 horizons &nbsp; / &nbsp; 27 interactive views**
 
-[![limit order book forecasting overview](docs/images/project-cover.png)](docs/presentation.pdf)
+[![limit order book research film](assets/research-film.gif)](https://khaamr.github.io/lob-forecasting-lab/)
+
+<sub>the supplied research film, converted to a silent, looping gif · [silent mp4](assets/research-film.mp4)</sub>
 
 </div>
 
@@ -22,9 +24,11 @@ based on **_deep limit order book forecasting: a microstructural guide_ (2025)**
 
 | start here | what you will find |
 | --- | --- |
+| [interactive research site](https://khaamr.github.io/lob-forecasting-lab/) | filter saved results by book, horizon, confidence and metric; inspect measured market characteristics |
+| [readme page](https://khaamr.github.io/lob-forecasting-lab/readme.html) | a readable web edition of this guide |
 | [executed notebook](lob_reproduction_future_work.ipynb) | visible model implementations, data lineage, experiments, tables and plotly graphs |
 | [round 1 · 18-slide presentation](docs/presentation.pdf) | the motivation, paper framework, architecture, findings and limitations |
-| [interactive dashboard](https://khaamr.github.io/lob-forecasting-lab/) | an interactive gallery of all 27 views; [download the offline html](research_dashboard.html) |
+| [27-view dashboard](https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html) | an interactive gallery of all 27 views; [download the offline html](research_dashboard.html) |
 | [reproduction guide](docs/reproduction.md) | environment setup, data acquisition, cached replay and retraining |
 | [saved results](results) | metrics, calibration, transfer, ablations, uncertainty and verification records |
 
@@ -115,3 +119,43 @@ for the command-line pipeline and full retraining, see the [reproduction guide](
 [archived source manifests](data/manifests) · [official lobster samples](https://php.lobsterdata.com/info/DataSamples.php) · [tardis sample documentation](https://docs.tardis.dev/downloadable-csv-files/overview) · [upstream revision](results/reference_revision.json)
 
 vendor inputs and the third-party reference checkout are excluded from this repository. the original article is linked above; the round 1 presentation is included as supplied.
+
+## practical use cases
+
+| scenario | what this study helps resolve |
+| --- | --- |
+| choosing an architecture | compare four neural models with logistic, persistence and prior baselines before committing more compute; the saved logistic baseline leads average mcc |
+| reviewing a seemingly accurate forecast | inspect mcc, macro f1 and class balance together; stable labels dominate some short test intervals |
+| setting a confidence threshold | inspect how filtering changes skill and retained coverage; undefined metrics stay undefined rather than becoming zero |
+| studying signal timing | compare classification with complete transaction overlap; directional skill does not establish well-timed execution or profitability |
+| moving between markets | inspect spread regimes and cross-exchange transfer before assuming a signal generalizes |
+| reviewing or teaching the reproduction | use the site, readme page, executed notebook and all 27 original interactive views without retraining |
+
+## website and media
+
+the responsive research site follows the supplied dark prototype, with cyan and mint accents. its explorer reads the existing results/metrics.csv directly. market details use results/microstructure.csv and results/evaluation_windows.csv. there is no fabricated live feed or browser-based neural inference.
+
+the original dashboard, notebook, presentation, checkpoints, research scripts and scientific tests remain available. the homepage replaces the old redirect; research_dashboard.html keeps the full 27-view gallery. the film is illustrative project media, not experimental evidence.
+
+the supplied ten-second video is preserved visually in assets/research-film.mp4 with its audio stream removed. assets/research-film.gif contains the same full sequence at 800 × 450 and 12 frames per second, loops indefinitely and has no audio. github renders the gif inline; the website uses the smaller silent mp4 with a pause control and respects reduced-motion preferences.
+
+preview the website from the repository root:
+
+```sh
+python3 -m http.server 8000
+```
+
+open http://localhost:8000. the site needs no build or javascript package installation. its csv-backed interactions require an http server rather than opening index.html as a file.
+
+validate the website's metric calculations:
+
+```sh
+node --test tests/site.test.mjs
+```
+
+after editing this readme, regenerate its web edition with the optional authoring dependency:
+
+```sh
+python -m pip install markdown
+python scripts/build_readme.py
+```
