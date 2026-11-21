@@ -28,17 +28,20 @@ def build_readme():
     page += '</article></main><footer class="shell footer"><a class="brand" href="index.html">LOB<span class="brand-light">/</span>lab</a><p>Public-data reproduction & extensions<br>Research prototype · no live market feed</p><div><a href="README.md">Markdown source</a><a href="https://doi.org/10.1080/14697688.2025.2522911">Original article</a><a href="research_dashboard.html">Full dashboard</a></div></footer></body></html>'
     soup = BeautifulSoup(page, 'html.parser')
     image = soup.find('img', src='assets/research-film.gif')
-    image['id'] = 'research-film'
-    image['width'] = '800'
-    image['height'] = '450'
-    toggle = soup.new_tag('button', attrs={
-        'id': 'film-toggle',
-        'type': 'button',
-        'class': 'button button-small button-outline',
-        'aria-label': 'pause animation',
-    })
-    toggle.string = 'Ⅱ'
-    image.parent.insert_after(toggle)
+    if image is not None:
+        image['id'] = 'research-film'
+        image['width'] = '800'
+        image['height'] = '450'
+        toggle = soup.new_tag('button', attrs={
+            'id': 'film-toggle',
+            'type': 'button',
+            'class': 'button button-small button-outline',
+            'aria-label': 'pause animation',
+        })
+        toggle.string = 'Ⅱ'
+        image.parent.insert_after(toggle)
+    else:
+        soup.find('script', src='assets/readme.js').decompose()
     for node in list(soup.find_all(string=True)):
         if isinstance(node, (Comment, Doctype)) or node.find_parent(['script', 'style', 'code', 'pre']):
             continue

@@ -8,9 +8,7 @@
 
 **7 order books &nbsp; / &nbsp; 4 neural architectures &nbsp; / &nbsp; 3 horizons &nbsp; / &nbsp; 27 interactive views**
 
-[![deep limit order book forecasting animation](assets/research-film.gif)](https://khaamr.github.io/lob-forecasting-lab/)
-
-<sub>the supplied 20-second animation, shown as a silent looping gif</sub>
+[![limit order book forecasting overview](docs/images/project-cover.png)](docs/presentation.pdf)
 
 </div>
 
@@ -137,7 +135,7 @@ the website compares saved experiments from results/metrics.csv. market details 
 
 the original dashboard, notebook, presentation, checkpoints, research scripts and scientific tests remain available. the homepage replaces the old redirect; research_dashboard.html keeps the full 27-view gallery. the animation is illustrative project media, not experimental evidence.
 
-assets/research-film.gif is an unchanged copy of the supplied gemini_video_slow.gif: 800 × 450 pixels, 240 frames and a 20-second loop. the same gif appears in this readme and on the website. the website can pause it on a still frame and shows that still frame by default when reduced motion is enabled.
+assets/research-film.gif is an unchanged copy of the supplied gemini_video_slow.gif: 800 × 450 pixels, 240 frames and a 20-second loop. the website uses this gif; this readme uses the original project cover image. the website can pause it on a still frame and shows that still frame by default when reduced motion is enabled.
 
 preview the website from the repository root:
 
