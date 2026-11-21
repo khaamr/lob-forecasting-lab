@@ -4,7 +4,7 @@
 
 **deep limit order book forecasting · reproduction and extensions**
 
-[website](https://khaamr.github.io/lob-forecasting-lab/) · [readme page](https://khaamr.github.io/lob-forecasting-lab/readme.html) · [notebook](lob_reproduction_future_work.ipynb) · [presentation](docs/presentation.pdf) · [slide gallery](docs/presentation.md) · [27-view dashboard](https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html)
+[website](https://khaamr.github.io/lob-forecasting-lab/) · [notebook](lob_reproduction_future_work.ipynb) · [presentation](docs/presentation.pdf) · [27-view dashboard](https://khaamr.github.io/lob-forecasting-lab/research_dashboard.html)
 
 **7 order books &nbsp; / &nbsp; 4 neural architectures &nbsp; / &nbsp; 3 horizons &nbsp; / &nbsp; 27 interactive views**
 
